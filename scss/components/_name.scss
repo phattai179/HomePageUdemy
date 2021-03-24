@@ -1,0 +1,10 @@
+.name__edit{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: rgb(104,111,122);
+    text-align: center;
+    line-height: 64px;
+    margin-right: 16px;
+    @include styleText($color-white-0,$fs-2 - 2, $fw-bold);
+}

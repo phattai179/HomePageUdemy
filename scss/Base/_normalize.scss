@@ -1,0 +1,121 @@
+.course__list{
+    .owl-prev, .owl-next{
+        position: absolute;
+        top: 35%;
+        left: -3%;
+        width: 47px;
+        height: 47px;
+        background-color: $color-white-0 !important;
+        border-radius: 50% !important;
+        box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);;
+        z-index: 3;
+        span{
+            color: $color-blue;
+            font-size: $fs-4;
+            text-align: center;
+            line-height: 0.8;
+        }
+        &:hover{
+            box-shadow: 0 2px 8px 2px rgba(20,23,28,.15);
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+
+    .owl-next{
+        left: unset;
+        right: -3%;
+    }
+
+}
+
+.student__content{
+    .owl-prev, .owl-next{
+        position: absolute;
+        top: 35%;
+        left: -2%;
+        width: 47px;
+        height: 47px;
+        background-color: $color-white-0 !important;
+        border-radius: 50% !important;
+        box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);;
+        z-index: 3;
+        span{
+            color: $color-blue;
+            font-size: $fs-4;
+            text-align: center;
+            line-height: 0.8;
+        }
+        &:hover{
+            box-shadow: 0 2px 8px 2px rgba(20,23,28,.15);
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+
+    .owl-next{
+        left: unset;
+        right: -2%;
+    }
+
+}
+
+.comment__content{
+    .owl-prev, .owl-next{
+        position: absolute;
+        top: 35%;
+        left: -2%;
+        width: 47px;
+        height: 47px;
+        background-color: $color-white-0 !important;
+        border-radius: 50% !important;
+        box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);;
+        z-index: 3;
+        span{
+            color: $color-blue;
+            font-size: $fs-4;
+            text-align: center;
+            line-height: 0.8;
+        }
+        &:hover{
+            box-shadow: 0 2px 8px 2px rgba(20,23,28,.15);
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+
+    .owl-next{
+        left: unset;
+        right: -2%;
+    }
+
+}
+
+
+
+// reponsive
+.student__content, .comment__content, .course__list{
+    .owl-prev{
+        @include reponsive('large'){
+            left: -3%;
+        }
+
+        @include reponsive('medium'){
+            left: -5%;
+        }
+
+    }
+
+    .owl-next{
+        @include reponsive('large'){
+            right: -3%;
+        }
+
+        @include reponsive('medium'){
+            right: -5%;
+        }
+    }
+}

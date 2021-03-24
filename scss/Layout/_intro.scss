@@ -1,0 +1,43 @@
+.intro{
+    background: linear-gradient(to right, $color-purple, $color-red-2, $color-red-0);
+    .intro__content{
+        width: 90%;
+        margin: auto;
+        .intro__item{
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            span{
+                @include styleText($color-white-0, $fs-4 + 7, $fw-normal);
+                margin-right: $mg-1 + 6;
+            }
+
+            .intro__detail{
+                h3{
+                    @include styleText($color-white-0,$fs-2 - 3, $fw-bold-1);
+                    margin-bottom: 0;
+                }
+
+                p{
+                    @include styleText($color-white-0,$fs-0, $fw-normal);
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.intro{
+    @include reponsive('extra-large'){
+        .intro__item{
+            padding: 25px 0 !important;
+            span{
+                display: none;
+            }
+        }
+    }
+
+    @include reponsive('medium'){
+        display: none;
+    }
+}

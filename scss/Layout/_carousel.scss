@@ -1,0 +1,110 @@
+.myCarousel{
+    .carousel__content{
+        background-image: url(../img/cover.jpg);
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        position: relative;
+        display: flex;
+        align-items: center;
+        .carousel__intro{
+            position: absolute;
+            width: 30%;
+            left: 5%;
+            h2{
+                @include styleText($color-white-0,$fs-4,$fw-bold-1);
+                margin-bottom: $mg-1;
+            }
+            p{
+                @include styleText($color-white-0,$fs-2 - 2, $fw-normal);
+                margin-bottom: 20px;
+            }
+            .carousel__group {
+                flex-grow: 5;
+                .form-control {
+                    @include styleText($color-black-0, $fs-1, $fw-normal);
+                    border: none;
+                    background-color: $color-white-0;
+                    border-radius: 0;
+                    box-shadow: none;
+                    padding: 25px 15px;
+                    border-bottom: 1px solid $color-white-0;
+    
+                    &::placeholder{
+                        @include styleText($color-black-light, $fs-2, $fw-normal);
+                    }
+    
+                    // &:focus {
+                    // }
+                    &:focus + .input-group-append {
+                        &:hover {
+                            .input-group-text {
+                                background-color: $color-red-0;
+                                color: $color-white-0;
+                            }
+                        }
+                    }
+                }
+    
+                .input-group-append {
+                    .input-group-text {
+                        background-color: $color-white-0;
+                        color: $color-red-0;
+                        border: none;
+                        border-radius: 0;
+                        i{
+                            font-size: $fs-1;
+                        }
+                    }
+                    &:hover {
+                        .input-group-text {
+                            background-color: $color-red-0;
+                            color: $color-white-0;
+                        }
+                    }
+                }
+            }
+        
+        }
+    }
+}
+
+
+.myCarousel{
+    .carousel__content{
+        @media screen and (max-width:1400px) and (min-width: 1200px) {
+            .carousel__intro{
+                width: 35%;
+            }
+        }
+
+        @include reponsive('extra-large'){
+            .carousel__intro{
+                width: 45%;
+            }
+        }
+
+        @include reponsive('large'){
+            .carousel__intro{
+                width: 55%;
+            }
+        }
+
+        @include reponsive('medium'){
+            .carousel__intro{
+                width: 70%;
+                h2{
+                    @include styleText($color-white-0,$fs-4 - 8,$fw-bold-1);
+                    margin-bottom: $mg-1;
+                }
+                p{
+                    @include styleText($color-white-0,$fs-2 - 3, $fw-normal);
+                    margin-bottom: 20px;
+                }
+
+            }
+        }
+    }
+}
